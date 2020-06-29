@@ -2,7 +2,7 @@
 import React from "react";
 import styled, {css} from "styled-components";
 import "../index.css";
-import { DIV } from "../App";
+//import Axios from "axios";
 
 export const H2 =styled.h2`
   font-family: 'Orbitron', sans-serif;
@@ -31,6 +31,7 @@ export const DIV1 = styled.div`
 
 
 const Character = ({name, birthYear, homeworld, films, eyeColor, gender}) => {
+
 
     return(
         <DIV1 className = "aPerson">
