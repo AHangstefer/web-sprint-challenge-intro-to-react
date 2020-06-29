@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from "axios";
-/*import Character from "./components/Character"; */ 
+import Character from "./components/Character"; 
 
 const App = () => {
 
@@ -13,7 +13,7 @@ const App = () => {
     .get(`https://swapi.dev/api/people/`)
     .then(res =>{
       console.log ('this is res from App', res);
-      setItems(res.data.results);
+      setItems(res.data);
     })
     .catch(err =>{
       console.log("well.. shit", err)
@@ -28,9 +28,21 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-     {/* <Character/> */}
+      <div className ="CharacterList">
+        {characterItems.map(person) => {
+         <Character
+          key = {person.name}
+          name ={person.name}
+          birthYear = {person.birth_year}
+          homeworld = {person.homeworld}
+          films = {person.films}
+          
+          /> 
+        
+    }}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
