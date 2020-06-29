@@ -13,21 +13,3 @@ body {
   background-image: url('./images/sw-bg.jpg');
   background-size: cover;
 }
-
-.CharacterList {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  
-  
-
-  
-}
-
-.aPerson{
-  display: flex;
-  flex-direction: column;
-  border: .2rem navy solid;
-  width: 50%;
-  
-}

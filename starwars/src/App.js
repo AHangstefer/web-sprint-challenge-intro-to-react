@@ -2,6 +2,17 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from "axios";
 import Character from "./components/Character"; 
+import styled, {css} from "styled-components";
+
+
+export const DIV = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
+  justify-content: center;
+  padding-top: 3rem;
+  
+`;
 
 const App = () => {
 
@@ -28,7 +39,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <div className ="CharacterList">
+      <DIV className ="CharacterList">
         {characterItems.map(person => (
          <Character
           key = {person.name}
@@ -42,7 +53,7 @@ const App = () => {
           /> 
         
         ))}
-      </div>
+      </DIV>
     </div>
   );
 };
