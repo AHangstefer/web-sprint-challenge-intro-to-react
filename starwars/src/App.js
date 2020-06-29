@@ -34,8 +34,10 @@ const App = () => {
           key = {person.name}
           name ={person.name}
           birthYear = {person.birth_year}
-          homeworld = {person.homeworld}
-          films = {person.films}
+          eyeColor = {person.eye_color}
+          gender = {person.gender}
+          //homeworld = {person.homeworld}
+          //films = {person.films}
           
           /> 
         
