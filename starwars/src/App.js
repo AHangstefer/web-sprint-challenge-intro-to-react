@@ -13,7 +13,7 @@ const App = () => {
     .get(`https://swapi.dev/api/people/`)
     .then(res =>{
       console.log ('this is res from App', res);
-      setItems(res.data);
+      setItems(res.data.results);
     })
     .catch(err =>{
       console.log("well.. shit", err)
@@ -29,7 +29,7 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       <div className ="CharacterList">
-        {characterItems.map(person) => {
+        {characterItems.map(person => (
          <Character
           key = {person.name}
           name ={person.name}
@@ -39,7 +39,7 @@ const App = () => {
           
           /> 
         
-    }}
+        ))}
       </div>
     </div>
   );
