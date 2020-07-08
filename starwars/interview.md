@@ -7,12 +7,12 @@ What is React JS and what problems does it solve? Support your answer with conce
 
 Describe component state.
 
-Component state is for managing data. The data only re-renders (using energy) when the data changes.
+Component state is for managing data. The component (one piece) only re-renders (using energy) when the data changes.
 
 Describe props.
 
-Props are like functions in Javascript. 
-They allow you to pass data from one component to another. 
+Props are like function arguments in Javascript. 
+They allow you to pass data from one component to another. Relationship must be parent to child. Can only pass props down.
 
 What are side effects, and how do you sync effects in a React component to changes of certain state or props?
 
